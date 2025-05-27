@@ -13,16 +13,11 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// | ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | TAB  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | RET  |
-//                    | GUI | LWR | CTRL |   | SPAC | RSE  | ALT |
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp TAB   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET 
-       &kp LGUI &lt 2 SPACE &mt LCTRL RET    &lt 1 SPACE  &mo 2 &mt RALT DEL 
+   &kp GRAVE &kp Q &kp W &kp E &kp R &kp T         &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &lt 3 LC(LG(TAB))   &lt 1 A &kp S &kp D &kp F   &kp G &kp H &kp J  &kp K     &kp L   &lt 1 SEMI &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B         &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT RET 
+     &mt LGUI BSPC &mt LCTRL RET &lt 2 ESC         &lt 3 DEL &lt 2 SPACE &mt RALT TAB 
                         >;
                 };
                 lower_layer {
@@ -39,6 +34,19 @@
                         >;
                 };
                 raise_layer {
+// -----------------------------------------------------------------------------------------
+// | F1  | F2 |  F3 | F4  | F5  | F6  |     | [  |  ]  |  {  |  }  | PSCR| BKSP |
+// | F7  | F8 |  F9 | F10 | F11 | F12 |     | ¿  |  ?  |  #  |  &  | UP  |  ç   |
+// |BTCLR| BT1 | BT2| BT3 |BT4  | BT5 |     |  ¡ |  !  |  %  |  L  | DOWN|  R   |
+//             | bootloader |  _  | @   |     | ENT|     | ALT |
+                        bindings = <
+   &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6          &kp RA(LBKT)  &kp RA(RBKT)   &kp RA(SQT)  &kp RA(BSLH)  &kp PSCRN   &kp BSPC
+   &kp F7       &kp F8       &kp F9       &kp F10      &kp F11      &kp F12         &kp PLUS      &kp LS(MINUS)  &kp GRAVE    &kp RA(N3)    &kp UP      &kp BSLH
+   &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &kp EQUAL     &kp EXCL       &kp TILDE    &kp LEFT      &kp DOWN    &kp RIGHT
+                                          &trans       &trans 	    &kp RA(N2)      &trans        &trans         &kp RALT
+                        >;
+                };
+                raise_one_more_layer {
 // -----------------------------------------------------------------------------------------
 // | F1  | F2 |  F3 | F4  | F5  | F6  |     | [  |  ]  |  {  |  }  | PSCR| BKSP |
 // | F7  | F8 |  F9 | F10 | F11 | F12 |     | ¿  |  ?  |  #  |  &  | UP  |  ç   |
