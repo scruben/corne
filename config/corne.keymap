@@ -24,16 +24,16 @@
                         bindings = <
    &kp ESC       &kp LS(HOME)     &kp K_PLAY_PAUSE  &kp K_NEXT   &kp LS(LBKT)  &kp LS(RBKT)        &kp LS(LEFT) &kp LS(DOWN) &kp LS(UP)  &kp LS(RIGHT)  &kp LS(END) &kp BSPC
    &kp CLCK      &kp HOME         &kp BSPC          &kp DEL      &kp LS(N9)    &kp LS(N0)          &kp LEFT     &kp UP       &kp UP      &kp RIGHT      &kp END     &kp RET
-   &kp LSHFT     &kp K_MUTE       &kp K_VOL_DN      &kp K_VOL_UP &kp LBKT      &kp RBKT            &kp LS(EQUAL) &kp MINUS   &kp EQUAL   &kp LS(MINUS)  &kp BSLH    &kp RSHFT   
+   &kp LSHFT     &kp K_MUTE       &kp K_VOL_DN      &kp K_VOL_UP &kp LBKT      &kp RBKT            &kp LS(EQUAL) &kp MINUS   &kp EQUAL   &kp LS(MINUS)  &kp BSLH    &kp LS(BSLH)   
                                                     &mt LGUI DEL &mt LCTRL SPACE &kp TAB           &kp BSPC    &kp RET    &mt RALT ESC
                         >;
                 };
                 raise_layer {
                         bindings = <
-   &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6          &kp RA(LBKT)  &kp RA(RBKT)   &kp RA(SQT)  &kp RA(BSLH)  &kp PSCRN   &kp BSPC
-   &kp F7       &kp F8       &kp F9       &kp F10      &kp F11      &kp F12         &kp PLUS      &kp LS(MINUS)  &kp GRAVE    &kp RA(N3)    &kp UP      &kp BSLH
-   &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &kp EQUAL     &kp EXCL       &kp TILDE    &kp LEFT      &kp DOWN    &kp RIGHT
-                                          &trans       &trans       &kp RA(N2)      &trans        &trans         &kp RALT
+   &trans       &kp LS(7)    &kp LS(8)    &kp LS(9)    &kp LS(0)    &trans          &trans        &kp 7          &kp 8        &kp 9      &kp PSCRN   &trans
+   &trans       &kp LS(4)    &kp LS(5)    &kp LS(6)    &trans       &trans          &trans        &kp 4          &kp 5        &kp 6      &trans      &trans
+   &trans       &kp LS(1)    &kp LS(2)    &kp LS(3)    &trans       &trans          &trans        &kp 1          &kp 2        &kp 3      &trans      &trans
+                                          &trans       &trans       &trans          &trans        &kp 0          &trans
                         >;
                 };
                 raise_one_more_layer {
